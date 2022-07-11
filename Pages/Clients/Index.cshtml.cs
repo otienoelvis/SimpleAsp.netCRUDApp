@@ -1,3 +1,4 @@
+using jokiso.Pages.Shared;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 // using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
@@ -10,7 +11,7 @@ public class Index : PageModel
     {
         try
         {
-            String connectionString = "Server=localhost;Port=3306;Database=jokesapp;Uid=don;Pwd=12345678;connect timeout=100;default command timeout=200;";
+            String connectionString = MyConstants.connectionString;
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             
             {
